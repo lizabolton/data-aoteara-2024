@@ -15,6 +15,7 @@ format:
     background-transition: fade
     highlight-style: ayu-mirage
     slide-number: c/t
+    auto-stretch: false
 code-link: true
 execute:
   echo: true
@@ -116,6 +117,20 @@ these things already, I always find a clear framework to be extremely
 helpful in organising my own thoughts and actions  With secondary data
 there is also the need to decipher choices and interpret metadata
 (names, units)
+
+
+# sampling variation
+
+Using the data from the warm up activity we can see
+
+# testing, testing, 1 2 3
+
+
+
+# risky business
+
+pill case study and bacon?
+
 
 # resources & references
 

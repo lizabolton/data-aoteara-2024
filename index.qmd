@@ -1,10 +1,10 @@
 ---
-title: "the art and science of uncertainty"
-subtitle: "Data Aotearoa 2024"
-author: "Liza Bolton"
+title: "the art and science of learning from data"
+subtitle: "data aotearoa 2024"
+author: "liza bolton"
 date: 2024-03-08
 title-slide-attributes:
-  data-background-image: /img/title_image.jpg
+  data-background-image: "/img/title_image.jpg"
   data-background-opacity: "0.4"
 format:
   revealjs:
@@ -35,23 +35,17 @@ plot(code)
 dev.off()
 ```
 
-![](img/slide-qr.png){fig-align="center"}
+![](img/slide-qr.png){fig-align="center" width="700"}
 
 or go to [link.lizabolton.com](link.lizabolton.com)
 
-# kia ora, i'm liza!
-
-Your friendly neighbourhood statistician.
+# kia ora
 
 ```{r xaringan-editable, echo=FALSE}
 xaringanExtra::use_editable(expires = 1)
 ```
 
-------------------------------------------------------------------------
-
-::: columns
-::: column
-Tēnā koutou katoa,\
+Tēnā koutou katoa\
 
 Ko **Uropi** me **Kanata** te whakapaparanga mai (engari)\
 
@@ -61,15 +55,11 @@ Ko **O-tāwhao** te mārae\
 
 Ko **Tāmaki Makaurau** te kāinga\
 
-Ko **Liza** taku ingoa\
+Ko **Liza**[^1] taku ingoa\
+
+[^1]: Pronounced like: "lie" and "zuh".
 
 Tēnā tātou katoa
-:::
-
-::: {.column .fragment}
-CV at a glance
-:::
-:::
 
 ::: notes
 Greetings everyone\
@@ -78,6 +68,87 @@ I grew up in Te Awamutu\
 My mārae is O-Tāwhao\
 My home is Auckland\
 My name is Liza
+:::
+
+## CV at a glance
+
+#### education
+
+🎓 PhD in Statistics from the University of Auckland: [*Longitudinal
+predictors of mortality inequalities in Aotearoa New
+Zealand*](https://researchspace.auckland.ac.nz/handle/2292/67251)
+
+<br>
+
+#### consulting
+
+💼 Statistical consultant for a range of business, education and not
+for-profit organisations, (or as I prefer, Data Ambassador),
+self-employed (2013-)
+
+<br>
+
+#### teaching statistics and data science
+
+👩🏻‍🏫 Professional Teaching Fellow in the Department of Statistics at the
+University of Auckland (2023-)
+
+👩🏻‍🏫 Assistant Professor, Teaching Stream in the Department of Statistical
+Sciences at the University of Toronto (2020-2023)
+
+::: notes
+I currently teach a range of university courses, but all of them touch
+on how we explore and visualize data, how we can learn from data, how we
+communicate what we find to others (statisticians and non-statisticians
+alike) and ethical considerations for people making decisions with data.
+:::
+
+## quick, write! what's your experience with "statistics"?
+
+Go to [this
+link](https://statsapps.online/slinky/G291726211GT2H/student/)[^2] and
+write a short answer. It is anonymous.
+
+[^2]: This is also on my
+    [link.lizabolton.com](https://link.lizabolton.com/) page as '[Quick,
+    write! app](https://statsapps.online/write/G292N1Q132D9/create/)'.
+
+```{r, eval = F, echo=F}
+# Need to rerun if change URL
+code <- qrcode::qr_code("https://statsapps.online/write/G292N1Q132D9/create/")
+png("img/quickwrite-qr.png")
+plot(code)
+dev.off()
+```
+
+![](img/quickwrite-qr.png){fig-align="center" width="700"}
+
+## plan for this session
+
+-   warm-up activity (sampling variation)
+-   *errors* but not mistakes
+-   testing, testing 1 2 3
+-   risky business
+-   what i tell my students not to do
+-   bogs
+
+::: notes
+Statistics is also fundamentally concerned with learning from data and
+quantifying uncertainty.
+
+Data Science is a relatively new interdisciplinary field that also
+includes the computational aspects of acquiring, managing, and analyzing
+data. Both **reasoning** with and **computing** with data play important
+roles in these related disciplines.
+
+We've all seen in the last few years alone how rapidly tools and tech
+can evolve, but much more than being a series of ever flashier meat
+grinders to crank your data through, the most valuable thing about
+statistics is as a way of seeing and being in the world. It's a
+lifestyle, baby.
+
+With the time we have together, I'm hoping to help you cultivate some of
+the big picture ways of thinking like a statistician.
 :::
 
 # warm up activity
@@ -93,10 +164,15 @@ Height? Income?
 ::: fragment
 [Link to survey](https://forms.gle/njWot2YzLKhm9bhWA)
 
-```{r, echo=F}
+```{r, echo=F, eval = F}
+# Re-run if link changes
 code <- qrcode::qr_code("https://forms.gle/njWot2YzLKhm9bhWA")
+png("img/form-qr.png")
 plot(code)
+dev.off()
 ```
+
+![](img/form-qr.png){fig-align="center" width="700"}
 :::
 :::
 :::
@@ -106,31 +182,59 @@ If you're looking at these slides later, we probably (tech willing)
 decided on a numeric variable to measure about the group here.
 :::
 
-## I have data, why do I need statistics?
+## sampling variation
 
-Have some hypotheses going in to test o If data is consistent with your
-hypotheses, is it consistent with others? - Henry Cooke's recent data
-viz on public servants? Might be paywalled (library) - Data moves
-concept (Erickson et al. 2019) o Summarising, merging, filtering,
-grouping, calculating: While you're likely doing many if not all of
-these things already, I always find a clear framework to be extremely
-helpful in organising my own thoughts and actions  With secondary data
-there is also the need to decipher choices and interpret metadata
-(names, units)
+**Sampling variation** is the
 
+\-\--
 
-# sampling variation
+![A gif showing box plot summaries for a range of samples of size 10
+from two
+populations.](https://www.stat.auckland.ac.nz/~wild/WPRH/AnimGifs/boxes_2samp_mem_10_600.gif){alt="A gif showing box plot summaries for a range of samples of size 10 from two populations."
+width="88%"}
 
-Using the data from the warm up activity we can see
+------------------------------------------------------------------------
+
+![A gif showing box plot summaries for a range of samples of size 10
+from two
+populations.](https://www.stat.auckland.ac.nz/~wild/WPRH/AnimGifs/boxes_2samp_mem_10_600.gif){width="88%"}
+
+# *errors* but not mistakes
 
 # testing, testing, 1 2 3
 
+## what is a p-value anyways?
 
+::: note
+Any D&D players in the room? Baldur's Gate 3 brain rot like me?
 
+What's the chance of getting a natural 20? 1 in 20, which is 5% of the
+time.
+:::
+
+## p-hacking
+
+`{=html, eval=F} <iframe width="100%" height="90%" src="https://projects.fivethirtyeight.com/p-hacking/" title="Hack Your Way to Scientific Glory"></iframe>`
+
+source:
+[FiveThirtyEight](https://projects.fivethirtyeight.com/p-hacking/)
+
+## "some of us have a more difficult time saying 'booyah' to moral relativism"
+
+```{=html}
+<iframe width="100%" height="90%" src="https://www.youtube.com/embed/6pzvaiS45-0?si=YlPn1YYraepLHGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
 # risky business
 
 pill case study and bacon?
 
+# thanks for letting me talk about something I love!
+
+Let's keep in touch.
+
+[liza.bolton\@auckland.ac.nz](mailto:liza.bolton@auckland.ac.nz)
+
+[lizabolton.com](www.lizabolton.com)
 
 # resources & references
 
@@ -138,15 +242,17 @@ pill case study and bacon?
 
 (All FREE unless indicated with \$\$\$)
 
+<br>
+
 📘 Telling Stories with Data by Rohan Alexander
 [tellingstorieswithdata.com](https://tellingstorieswithdata.com)
 
 🏫 (\$\$\$) University of Auckland course: [*STATS 150: Communicating
-Statistics*](https://courseoutline.auckland.ac.nz/dco/course/STATS/150/1245)[^1]
+Statistics*](https://courseoutline.auckland.ac.nz/dco/course/STATS/150/1245)[^3]
 (a single course can be done as a Certificate of Proficiency; lecture
 recorded but tutorial attendance required)
 
-[^1]: This course used to be called *Lies, Damned Lies and Statistics*
+[^3]: This course used to be called *Lies, Damned Lies and Statistics*
     and I only found out yesterday it got renamed. I am inconsolable 😭
 
 # references

@@ -1,5 +1,5 @@
 ---
-title: "The Art and Science of Uncertainty"
+title: "the art and science of uncertainty"
 subtitle: "Data Aotearoa 2024"
 author: "Liza Bolton"
 date: 2024-03-08
@@ -23,6 +23,20 @@ editor:
   markdown: 
     wrap: 72
 ---
+
+# scan for slides
+
+```{r, eval = F, echo=F}
+# Need to rerun if change URL
+code <- qrcode::qr_code("https://lizabolton.github.io/data-aotearoa-2024/")
+png("img/slide-qr.png")
+plot(code)
+dev.off()
+```
+
+![](img/slide-qr.png){fig-align="center"}
+
+or go to [link.lizabolton.com](link.lizabolton.com)
 
 # kia ora, i'm liza!
 
@@ -57,11 +71,11 @@ CV at a glance
 :::
 
 ::: notes
-Greetings everyone \
+Greetings everyone\
 My origins are in Canada and Europe,\
-I grew up in Te Awamutu \
-My mārae is O-Tāwhao \
-My home is Auckland \
+I grew up in Te Awamutu\
+My mārae is O-Tāwhao\
+My home is Auckland\
 My name is Liza
 :::
 
@@ -79,8 +93,7 @@ Height? Income?
 [Link to survey](https://forms.gle/njWot2YzLKhm9bhWA)
 
 ```{r, echo=F}
-library(qrcode)
-code <- qr_code("https://forms.gle/njWot2YzLKhm9bhWA")
+code <- qrcode::qr_code("https://forms.gle/njWot2YzLKhm9bhWA")
 plot(code)
 ```
 :::

@@ -1,0 +1,131 @@
+---
+title: "The Art and Science of Uncertainty"
+subtitle: "Data Aotearoa 2024"
+author: "Liza Bolton"
+date: 2024-03-08
+title-slide-attributes:
+  data-background-image: /img/title_image.jpg
+  data-background-opacity: "0.4"
+format:
+  revealjs:
+    theme: theme.scss
+    transition: fade
+    width: 1600
+    height: 900
+    background-transition: fade
+    highlight-style: ayu-mirage
+    slide-number: c/t
+code-link: true
+execute:
+  echo: true
+  freeze: auto
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# kia ora, i'm liza!
+
+Your friendly neighbourhood statistician.
+
+```{r xaringan-editable, echo=FALSE}
+xaringanExtra::use_editable(expires = 1)
+```
+
+------------------------------------------------------------------------
+
+::: columns
+::: column
+Tēnā koutou katoa,\
+
+Ko **Uropi** me **Kanata** te whakapaparanga mai (engari)\
+
+Ko **Te Awamutu** te whenua tupu\
+
+Ko **O-tāwhao** te mārae\
+
+Ko **Tāmaki Makaurau** te kāinga\
+
+Ko **Liza** taku ingoa\
+
+Tēnā tātou katoa
+:::
+
+::: {.column .fragment}
+CV at a glance
+:::
+:::
+
+::: notes
+Greetings everyone \
+My origins are in Canada and Europe,\
+I grew up in Te Awamutu \
+My mārae is O-Tāwhao \
+My home is Auckland \
+My name is Liza
+:::
+
+# warm up activity
+
+## what will we measure?
+
+::: columns
+::: {.can-edit .column width="50%"}
+Height? Income?
+:::
+
+::: {.column width="50%"}
+::: fragment
+[Link to survey](https://forms.gle/njWot2YzLKhm9bhWA)
+
+```{r, echo=F}
+library(qrcode)
+code <- qr_code("https://forms.gle/njWot2YzLKhm9bhWA")
+plot(code)
+```
+:::
+:::
+:::
+
+::: footer
+If you're looking at these slides later, we probably (tech willing)
+decided on a numeric variable to measure about the group here.
+:::
+
+## I have data, why do I need statistics?
+
+Have some hypotheses going in to test o If data is consistent with your
+hypotheses, is it consistent with others? - Henry Cooke's recent data
+viz on public servants? Might be paywalled (library) - Data moves
+concept (Erickson et al. 2019) o Summarising, merging, filtering,
+grouping, calculating: While you're likely doing many if not all of
+these things already, I always find a clear framework to be extremely
+helpful in organising my own thoughts and actions  With secondary data
+there is also the need to decipher choices and interpret metadata
+(names, units)
+
+# resources & references
+
+## further resources
+
+(All FREE unless indicated with \$\$\$)
+
+📘 Telling Stories with Data by Rohan Alexander
+[tellingstorieswithdata.com](https://tellingstorieswithdata.com)
+
+🏫 (\$\$\$) University of Auckland course: [*STATS 150: Communicating
+Statistics*](https://courseoutline.auckland.ac.nz/dco/course/STATS/150/1245)[^1]
+(a single course can be done as a Certificate of Proficiency; lecture
+recorded but tutorial attendance required)
+
+[^1]: This course used to be called *Lies, Damned Lies and Statistics*
+    and I only found out yesterday it got renamed. I am inconsolable 😭
+
+# references
+
+## images
+
+Title photo by
+<a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pawel
+Czerwinski</a> on
+<a href="https://unsplash.com/photos/blue-and-black-floral-textile-sdx3SVUNjQI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>

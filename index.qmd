@@ -4,7 +4,7 @@ subtitle: "data aotearoa 2024"
 author: "liza bolton"
 date: 2024-03-08
 title-slide-attributes:
-  data-background-image: "/img/title_image.jpg"
+  data-background-image: "/img/title_image.png"
   data-background-opacity: "0.4"
 format:
   revealjs:
@@ -190,8 +190,7 @@ decided on a numeric variable to measure about the group here.
 
 ![A gif showing box plot summaries for a range of samples of size 10
 from two
-populations.](https://www.stat.auckland.ac.nz/~wild/WPRH/AnimGifs/boxes_2samp_mem_10_600.gif){alt="A gif showing box plot summaries for a range of samples of size 10 from two populations."
-width="88%"}
+populations.](https://www.stat.auckland.ac.nz/~wild/WPRH/AnimGifs/boxes_2samp_mem_10_600.gif){width="88%"}
 
 ------------------------------------------------------------------------
 
@@ -263,3 +262,4 @@ Title photo by
 <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pawel
 Czerwinski</a> on
 <a href="https://unsplash.com/photos/blue-and-black-floral-textile-sdx3SVUNjQI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+

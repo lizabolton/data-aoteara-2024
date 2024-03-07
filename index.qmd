@@ -61,11 +61,13 @@ Ko **O-tāwhao** te mārae\
 
 Ko **Tāmaki Makaurau** te kāinga\
 
-Ko **Liza**[^1] taku ingoa\
-
-[^1]: Pronounced like: "lie" and "zuh".
+Ko **Liza** taku ingoa\
 
 Tēnā tātou katoa
+
+::: footer
+Liza, pronounced like: "lie" and "zuh".
+:::
 
 ::: notes
 Greetings everyone\
@@ -118,10 +120,10 @@ time --- tell me!
 ## quick, write! what's your experience with "statistics"?
 
 Go to [this
-link](https://statsapps.online/slinky/G291726211GT2H/student/)[^2] and
+link](https://statsapps.online/slinky/G291726211GT2H/student/)[^1] and
 write a short answer. It is anonymous.
 
-[^2]: This is also on my
+[^1]: This is also on my
     [link.lizabolton.com](https://link.lizabolton.com/) page as '[Quick,
     write! app](https://statsapps.online/write/G292N1Q132D9/create/)'.
 
@@ -137,12 +139,11 @@ dev.off()
 
 ## plan for this session
 
--   warm-up activity (sampling variation)
--   core terms (samples, population, variance, sampling variation)
--   confidence intervals
--   statistical tests
--   case studies
+-   warm-up activity
+-   core ideas (samples, population, variance, sampling variation,
+    confidence intervals, statistical tests)
 -   bogs
+-   case studies
 
 ::: notes
 Statistics is also fundamentally concerned with learning from data and
@@ -194,7 +195,17 @@ If you're looking at these slides later, we probably (tech willing)
 decided on a numeric variable to measure about the group here.
 :::
 
-# core terms
+------------------------------------------------------------------------
+
+## visualising re-sampling
+
+[sampling variation tool
+link](https://vit.inzight.nz/samplingVariation/SamplingVariation.php?file=https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5hcfcvKZe4xBRKueV7q8t8FjuqEeVH395bZ7KqNjxjil5erdSoZ0GaGSGz24k8Jn3F4u75Qkqkc4Y/pub?gid=1202419930&single=true&output=csv&var=Answer,n)
+
+```{=html}
+<iframe width="90%" height="90%" src="https://vit.inzight.nz/samplingVariation/SamplingVariation.php?file=https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5hcfcvKZe4xBRKueV7q8t8FjuqEeVH395bZ7KqNjxjil5erdSoZ0GaGSGz24k8Jn3F4u75Qkqkc4Y/pub?gid=1202419930&single=true&output=csv&var=Answer,n" title="Sampling variation"></iframe>
+```
+# core ideas
 
 ## variability
 
@@ -247,8 +258,9 @@ data |>
 
 ## sampling variation
 
-**Sampling variation** describes how much we would expect a statistic we
-are interested in to vary from sample to sample.
+**Sampling variation** describes how much an estimate varies from sample
+to sample. (The estimate is our best guess at some true value from the
+population, also called a parameter.)
 
 > For example, if each of you went out and sampled 20 people and
 > calculated their median income and then came back and we all plotted
@@ -261,7 +273,11 @@ are interested in to vary from sample to sample.
 -   But we can use what we know about the [size of the
     sample]{style="background-color: gold;"} we can take AND the
     [variability of that sample]{style="background-color: gold;"}, to
-    make an educated guess about the variability of the population
+    make an educated guess about the variability of the population, and
+    so make claims about sampling variability.
+
+-   We quantify this uncertainty with our [standard
+    error]{style="background-color:gold;"}.
 :::
 
 ------------------------------------------------------------------------
@@ -272,7 +288,7 @@ populations.](https://www.stat.auckland.ac.nz/~wild/WPRH/AnimGifs/boxes_2samp_me
 
 ------------------------------------------------------------------------
 
-![A gif showing box plot summaries for a range of samples of size 10
+![A gif showing box plot summaries for a range of samples of size 100
 from two
 populations.](https://www.stat.auckland.ac.nz/~wild/WPRH/AnimGifs/boxes_2samp_mem_100_600.gif){width="88%"}
 
@@ -306,17 +322,92 @@ between the result from your survey and the population.
 All sources of error *not* related to sampling.
 
 ::: incremental
-Examples include: - coverage error - measurement error - interviewer
-bias - poor questionairre design - non-response error
+Examples include:
+
+-   coverage error
+
+-   measurement error
+
+    -   interviewer bias
+
+    -   poor questionnaire design
+
+-   non-response error
 :::
+
+------------------------------------------------------------------------
+
+The next two ideas are the most "not what you feel like they should be
+when you first learn about them" concepts I have ever encountered.
 
 ## confidence intervals
 
-# statistical tests
+> Example: For religious Asian New Zealanders in 2006, the odds of
+> mortality in the next 5 years were 1.25 (95% CI: 1.06, 1.47) times
+> higher that for their non-religious counterparts.
+
+::: incremental
+-   This is a claim about confidence in the METHOD that produces the
+    interval
+-   It is *not* the same as saying I'm 95/% sure the real value is in
+    here.
+-   More like, if in 100 universes I sampled from the
+    population/underlying process and applied this method, around 95 of
+    those universes I would have captured the true value.
+
+<br>
+
+-   I just don't know which type of universe this is...
+-   ... and I'l never know.
+:::
+
+::: footer
+This is a finding from my thesis, [*Longitudinal predictors of mortality
+inequalities in Aotearoa New
+Zealand*](https://researchspace.auckland.ac.nz/handle/2292/67251).
+:::
+
+## statistical tests
+
+Statistical tests go hand-in-hand with confidence intervals. They are
+really two sides of the same coin.
+
+**CI**: What is a [plausible range]{style="background-color:gold;"} of
+values for the thing we want to make a claim about?
+
+**Tests**: Can I [reject the claim]{style="background-color:gold;"} that
+the value is this number?
 
 ## what is a p-value anyways?
 
-::: note
+It is NOT how likely we are to be right. It is NOT how likely
+
+-   It is a 'conditional probability'.
+-   IF it was true that the value really is *this specific number*, then
+    how unusual would it be to get a result like this (or more extreme)
+
+We talk about [hypothesis testing]{style="background-color:gold;"}, and
+the idea is that we're setting up a mini court trial against this
+hypothesis. It is innocent till proven guilty, so we need to gather
+evidence against it.
+
+## common test purposes
+
+-   Is this coin fair? Our hypothesised value could be that it flips
+    heads half the tim (0.5).
+-   Are the means of these two groups different? We would hypothesise 0,
+    as a different of 0 is no difference.
+-   Do x and y change together? We would hypothesis that the *slope* is
+    0, which is the case where they don't change together.
+
+We usually try to set up the 'nothing going on'/'nothing to see
+here'/'status quo'/'boring' value and then knock it down by saying,
+well...IF that was true, it would be very unusual to see a value like we
+actually saw in our data.
+
+::: notes
+Does anyone know what value we usually look for in these tests?
+
 Any D&D players in the room? Baldur's Gate 3 brain rot like me?
 
 What's the chance of getting a natural 20? 1 in 20, which is 5% of the
@@ -325,24 +416,108 @@ time.
 
 ## p-hacking
 
-`{=html, eval=F} <iframe width="100%" height="90%" src="https://projects.fivethirtyeight.com/p-hacking/" title="Hack Your Way to Scientific Glory"></iframe>`
-
 source:
 [FiveThirtyEight](https://projects.fivethirtyeight.com/p-hacking/)
 
+```{=html}
+<iframe width="90%" height="90%" src="https://projects.fivethirtyeight.com/p-hacking/" title="Hack Your Way to Scientific Glory"></iframe>
+```
 ## "some of us have a more difficult time saying 'booyah' to moral relativism"
 
 ```{=html}
 <iframe width="100%" height="90%" src="https://www.youtube.com/embed/6pzvaiS45-0?si=YlPn1YYraepLHGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+## bogs
+
+![](img/bog.png){fig-alt="Two AI images generated by DALLE 2 from the prompt “dramatic oil painting of a swamp”. The left is labelled ‘bog of overconfidence’ and the right is labelled ‘bog of disbelief’."
+fig-align="center"}
+
+------------------------------------------------------------------------
+
+The following is about students in intro stats classes, but I think it
+is also really helpful for checking in on your own thinking and
+anticipating how others may engage with your communication about data
+and models.
+
+> ...students tend to enter and leave most introductory statistics
+> courses thinking of statistics in one of at least two incorrect ways:
+>
+> 1\. Students believe that statistics and mathematics are similar in
+> that statistical problems have a single correct answer; an answer that
+> tells us indisputable facts about the world we live in (Bog #1:
+> overconfidence) (Nicholson & Darnton, 2003; Pfannkuch & Brown, 1996),
+>
+> or,
+>
+> 2\. Students believe that statistics can be 'made to say anything,'
+> like 'magic,' and so cannot be trusted. Thus, statistics is viewed as
+> disconnected and useless for scientific research and society (Bog #2:
+> disbelief) (Martin, 2003; Pfannkuch & Brown, 1996).
+>
+> Tintle, N., Chance, B., Cobb, G., Roy, S., Swanson, T., & VanderStoep,
+> J. (2015). Combating Anti-Statistical Thinking Using Simulation-Based
+> Methods Throughout the Undergraduate Curriculum. *The American
+> Statistician*, *69*(4), 362--370.
+> <http://www.jstor.org/stable/24592138>
+
+📄 PDF: <https://arxiv.org/pdf/1508.00543.pdf>
+
 # secondary data
 
 More and more of data science, and data journalism, uses some form of
-\<span style="background-color:gold;" secondary data <span>.
+[secondary data]{style="background-color:gold;"}.
+
+Are any of these classical statistical tools relevant?
+
+::: {.incremental}
+-   We have more and more scope to measure and observe the world, but
+    much of this is through proxies --- not quite the thing we want to
+    measure, but something related.
+
+-   I would argue this requires MORE statistical thinking, not less and
+    is the kind of thinking that AI won't be able to do well by itself.
+
+    -   Example proxy: [How many fires in Auckland
+        yesterday?](https://www.fireandemergency.nz/incidents-and-news/incident-reports/)
+
+:::
+
+## seeing what is not there
+
+This might sounds strange coming from a statistician, but sometimes the
+most important data story is the story about where the data isn't.
+What's MISSING?
+
+> 🖼️ Check out the incredible mixed-media installation The Library of
+> Missing Datasets (2016) by MIMI ỌNỤỌHA. It is "a physical repository
+> of those things that have been excluded in a society where so much is
+> collected.
+>
+> "Missing data sets" are the blank spots that exist in spaces that are
+> otherwise data-saturated."
+
+![](img/ONUOHA-datasets.png){fig-alt="A feminine hand with darker skin reaches into a filing cabinet with many files inside, each with tabbed labels. The hand is reaching for “Publicaly available gun trace data”. The image is from MIMI ỌNỤỌHA’s website and is of ‘The Library of Missing Datasets’ (2016)"
+fig-align="center" width="60%"}
+
+------------------------------------------------------------------------
+
+![](img/stretch.png){fig-alt="Four statistical distributions"
+fig-align="center" width="80%"}
 
 # case studies
 
-## risky business
+# risky business
+
+::: callout-warning
+Content warning: There is brief discussion of abortion as part of this
+case study.
+
+If at any time you feel uncomfortable or would like any support, please
+let one of us know. It is always okay to take a step away if you need
+it.
+:::
+
+------------------------------------------------------------------------
 
 ::: columns
 ::: {.column width="60%"}
@@ -352,7 +527,7 @@ of blood clots of 2nd generation OCs.
 
 <br>
 
-[That is a 100% increase]{style="background-color:gold; fontsize:80pt;"}.
+[That is a 100% increase]{style="fontsize:90pt; background-color:gold;"}
 :::
 
 ::: {.column width="40%"}
@@ -361,18 +536,28 @@ fig-align="center"}
 :::
 :::
 
----
+------------------------------------------------------------------------
 
-![](img/article.png)
+![](img/pill-paper-1.png){fig-alt="Clippings from the Guardian newspaper
+with title"Blood clot alert on the pill: Women warned about 7 brands of
+contraceptive". The text goes on to say: "One and a half million women
+were told yesterday that their brand of contraceptive pill could double
+the risk of a blood clot, provoking the biggest scare over the safety of
+oral contracepetives."}
 
-## quick, write! 
+------------------------------------------------------------------------
 
-<span style="font-size:80pt;">what follow-up question(s) do you have about this headline/info?</span>
+![](img/pill-paper-2.png){fig-alt="Clipping from the Guardian newspaper
+with title"Hundreds of callers inundate clinic for advice on warning"}
+
+## quick, write!
+
+[what follow-up question(s) do you have about this
+headline/info?]{style="font-size:80pt;"}
 
 Go to [this
-link](https://statsapps.online/slinky/G291726211GT2H/student/) and
-write a short answer. It is anonymous.
-
+link](https://statsapps.online/slinky/G291726211GT2H/student/) and write
+a short answer. It is anonymous.
 
 ```{r, eval = F, echo=F}
 # Need to rerun if change URL
@@ -384,11 +569,197 @@ dev.off()
 
 ![](img/quickwrite-qr.png){fig-align="center" width="650"}
 
-## run, run as fast as you can
+------------------------------------------------------------------------
 
-## for whom the (cow)bell tolls
+::: columns
+::: {.column width="50%"}
+::: columns
+Oral contraceptives were already known to increase risk of blood clots.
+:::
+:::
 
-# thanks for letting me talk about something I love!
+::: {.column width="50%"}
+![](img/clot-small.png){fig-alt="A cartoon/sketch person wearing classes with short hair looking at a pamphlet with a blood drop on it that says \"warning clot risk:"
+fig-align="center"}
+:::
+:::
+
+------------------------------------------------------------------------
+
+> "For the vast majority of women, the pill is a safe and highly
+> effective form of contraception. ...
+>
+> No-one need stop taking the pill before obtaining medical advice."
+
+\~ Advice from UK Committee on Safety of Medicines in the same message
+
+![](img/pill-all-small.jpg){fig-alt="10 cartoon medication tablets"
+fig-align="center" width="1440"}
+
+::: notes
+Use of 3rd generation OCs decreased 80%
+:::
+
+------------------------------------------------------------------------
+
+![](img/pill-20-small.jpg){fig-alt="The same 10 pills as on the previous slid, but now with 8 of the 10 coloured grey."
+fig-align="center"}
+
+------------------------------------------------------------------------
+
+![](img/pharmacy-small.png){fig-alt="Cartoon sketch of a pharmacy building with a sign in the window saying 'no gen 2 oc left'"
+fig-align="center" width="60%"}
+
+::: notes
+As this was the most used pill type there was not enough alternatives so
+some people were left with no other OC option
+:::
+
+## 13,500 more abortions
+
+![](img/abortions.png){fig-align="center" width="80%"}
+
+## an estimated 800 additional conceptions among girls under 16
+
+![](img/girl-small.jpg){fig-align="center" width="40%"}
+
+## £4 - 6 million spent on abortions by the National Health Service (NHS)
+
+![](img/money-small.jpg){fig-alt="Cartoon sketch of stacks of pounds"
+fig-align="center" width="50%"}
+
+## what went wrong?
+
+Absolute risk is a probability.
+
+The absolute risk of getting a blood clot for people taking the 3rd gen
+OC could be calculated as:
+
+$$
+\frac{\text{Number of people taking the 3rd gen OC that get a blood clot}}{\text{Total number of people taking the 3rd gen OC}}
+$$
+
+------------------------------------------------------------------------
+
+![](img/10-people-small.jpg){fig-alt="10 cartoon people"
+fig-align="center" width="80%"}
+
+------------------------------------------------------------------------
+
+![](img/3-people-small.png){fig-alt="Same picture as before but three people now have a blood drop symbol indicating a clot."
+fig-align="center" width="80%"}
+
+------------------------------------------------------------------------
+
+![](img/fraction-small.png){fig-alt="3 with clots over the whole group"
+fig-align="center" width="80%"}
+
+## what does DOUBLE the risk mean?
+
+::: incremental
+-   When we talk about double the risk, or 2x the risk or a twofold
+    increase in risk...
+
+-   We're talking about relative risk.
+
+-   We are comparing two absolute risks
+:::
+
+------------------------------------------------------------------------
+
+|           | Absolute Risk 1 | Absolute Risk 2 | Relative Risk |
+|-----------|-----------------|-----------------|---------------|
+| Example A | 30%             | 60%             | 2             |
+
+------------------------------------------------------------------------
+
+|           | Absolute Risk 1 | Absolute Risk 2 | Relative Risk |
+|-----------|-----------------|-----------------|---------------|
+| Example A | 30%             | 60%             | 2             |
+| Example B | 3%              | 6%              | 2             |
+
+------------------------------------------------------------------------
+
+|           | Absolute Risk 1 | Absolute Risk 2 | Relative Risk |
+|-----------|-----------------|-----------------|---------------|
+| Example A | 30%             | 60%             | 2             |
+| Example B | 3%              | 6%              | 2             |
+| Example C | 0.3%            | 0.6%            | 2             |
+
+# run, run as fast as you can
+
+![](img/original-dash.png){fig-align="center"}
+
+The regression lines are extrapolated (broken blue and red lines for men
+and women, respectively) and 95% confidence intervals (dotted black
+lines) based on the available points are superimposed. The projections
+intersect just before the 2156 Olympics, when the winning women's
+100-metre sprint time of 8.079 s will be faster than the men's at 8.098
+s. From: [Momentous sprint at the 2156
+Olympics?](https://www.nature.com/articles/431525a)
+
+## quick, write!
+
+[what does this chart tell you? any concerns?]{style="font-size:80pt;"}
+
+Go to [this
+link](https://statsapps.online/slinky/G291726211GT2H/student/) and write
+a short answer. It is anonymous.
+
+```{r, eval = F, echo=F}
+# Need to rerun if change URL
+code <- qrcode::qr_code("https://statsapps.online/write/G292N1Q132D9/create/")
+png("img/quickwrite-qr.png")
+plot(code)
+dev.off()
+```
+
+![](img/quickwrite-qr.png){fig-align="center" width="650"}
+
+------------------------------------------------------------------------
+
+Case study source and discussion: [The gender gap in 100-meter dash
+times, Calling
+Bullshit](https://callingbullshit.org/case_studies/case_study_gender_gap_running.html)
+
+# for whom the (cow)bell tolls
+
+![](img/cowbell.gif){fig-alt="Christopher Walken 'more cowbell' scene SNL skit"
+fig-align="center" width="60%"}
+
+------------------------------------------------------------------------
+
+![](img/musician_mortality.jpeg){fig-align="center" width="60%"}
+
+This graph is from an article entitled [Music to die for: how genre
+affects popular musicians' life
+expectancy](https://theconversation.com/music-to-die-for-how-genre-affects-popular-musicians-life-expectancy-36660),
+the Conversations
+
+## quick, write!
+
+[what does this chart tell you? any concerns?]{style="font-size:80pt;"}
+
+Go to [this
+link](https://statsapps.online/slinky/G291726211GT2H/student/) and write
+a short answer. It is anonymous.
+
+```{r, eval = F, echo=F}
+# Need to rerun if change URL
+code <- qrcode::qr_code("https://statsapps.online/write/G292N1Q132D9/create/")
+png("img/quickwrite-qr.png")
+plot(code)
+dev.off()
+```
+
+![](img/quickwrite-qr.png){fig-align="center" width="650"}
+
+------------------------------------------------------------------------
+
+Case study source and discussion: [Musicians and mortality, Calling
+Bullshit](https://callingbullshit.org/case_studies/case_study_musician_mortality.html)
+
+# thank you! questions?
 
 Let's keep in touch.
 
@@ -396,28 +767,24 @@ Let's keep in touch.
 
 [lizabolton.com](www.lizabolton.com)
 
-# resources & references
+## resources & references
 
-## further resources
-
-(All FREE unless indicated with \$\$\$)
-
-<br>
+### further resources
 
 📘 Telling Stories with Data by Rohan Alexander
 [tellingstorieswithdata.com](https://tellingstorieswithdata.com)
 
-🏫 (\$\$\$) University of Auckland course: [*STATS 150: Communicating
-Statistics*](https://courseoutline.auckland.ac.nz/dco/course/STATS/150/1245)[^3]
+🏫 University of Auckland course: [*STATS 150: Communicating
+Statistics*](https://courseoutline.auckland.ac.nz/dco/course/STATS/150/1245)[^2]
 (a single course can be done as a Certificate of Proficiency; lecture
 recorded but tutorial attendance required)
 
-[^3]: This course used to be called *Lies, Damned Lies and Statistics*
+[^2]: This course used to be called *Lies, Damned Lies and Statistics*
     and I only found out yesterday it got renamed. I am inconsolable 😭
 
-# references
+<br>
 
-## images
+### image reference
 
 Title photo by
 <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pawel

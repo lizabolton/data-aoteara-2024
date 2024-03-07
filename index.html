@@ -385,7 +385,7 @@
       margin-right: 0; 
     }
   </style>
-<script type="application/json" id="xaringanExtra-editable-docid">{"id":"xa3b56c9a9e2464eb2e914e742d0c1ee","expires":1}</script><script src="index_files/libs/himalaya-1.1.0/himalaya.js"></script><script src="index_files/libs/js-cookie-3.0.0/js.cookie.js"></script><link href="index_files/libs/editable-0.2.6/editable.css" rel="stylesheet">
+<script type="application/json" id="xaringanExtra-editable-docid">{"id":"d51f2a73c28248b3a734f8ddabbbb4ac","expires":1}</script><script src="index_files/libs/himalaya-1.1.0/himalaya.js"></script><script src="index_files/libs/js-cookie-3.0.0/js.cookie.js"></script><link href="index_files/libs/editable-0.2.6/editable.css" rel="stylesheet">
 <script src="index_files/libs/editable-0.2.6/editable.js"></script>
 </head>
 <body class="quarto-light">
@@ -421,8 +421,11 @@ liza bolton
 <p>Ko <strong>Te Awamutu</strong> te whenua tupu<br></p>
 <p>Ko <strong>O-tāwhao</strong> te mārae<br></p>
 <p>Ko <strong>Tāmaki Makaurau</strong> te kāinga<br></p>
-<p>Ko <strong>Liza</strong><sup>1</sup> taku ingoa<br></p>
+<p>Ko <strong>Liza</strong> taku ingoa<br></p>
 <p>Tēnā tātou katoa</p>
+<div class="footer">
+<p>Liza, pronounced like: “lie” and “zuh”.</p>
+</div>
 <aside class="notes"><p>Greetings everyone<br>
 My origins are in Canada and Europe,<br>
 I grew up in Te Awamutu<br>
@@ -439,7 +442,7 @@ My name is Liza</p>
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside><aside><ol class="aside-footnotes"><li id="fn1"><p>Pronounced like: “lie” and “zuh”.</p></li></ol></aside></section><section id="cv-at-a-glance" class="slide level2"><h2>CV at a glance</h2>
+      }</style></aside></section><section id="cv-at-a-glance" class="slide level2"><h2>CV at a glance</h2>
 <h4 id="education">education</h4>
 <p>🎓 PhD in Statistics from the University of Auckland: <a href="https://researchspace.auckland.ac.nz/handle/2292/67251"><em>Longitudinal predictors of mortality inequalities in Aotearoa New Zealand</em></a></p>
 <p><br></p>
@@ -467,14 +470,12 @@ My name is Liza</p>
 <figure><p><img data-src="img/quickwrite-qr.png" width="650"></p>
 </figure>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>This is also on my <a href="https://link.lizabolton.com/">link.lizabolton.com</a> page as ‘<a href="https://statsapps.online/write/G292N1Q132D9/create/">Quick, write! app</a>’.</p></li></ol></aside></section><section id="plan-for-this-session" class="slide level2"><h2>plan for this session</h2>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>This is also on my <a href="https://link.lizabolton.com/">link.lizabolton.com</a> page as ‘<a href="https://statsapps.online/write/G292N1Q132D9/create/">Quick, write! app</a>’.</p></li></ol></aside></section><section id="plan-for-this-session" class="slide level2"><h2>plan for this session</h2>
 <ul>
-<li>warm-up activity (sampling variation)</li>
-<li>core terms (samples, population, variance, sampling variation)</li>
-<li>confidence intervals</li>
-<li>statistical tests</li>
-<li>case studies</li>
+<li>warm-up activity</li>
+<li>core ideas (samples, population, variance, sampling variation, confidence intervals, statistical tests)</li>
 <li>bogs</li>
+<li>case studies</li>
 </ul>
 <aside class="notes"><p>Statistics is also fundamentally concerned with learning from data and quantifying uncertainty.</p>
 <p>Data Science is a relatively new interdisciplinary field that also includes the computational aspects of acquiring, managing, and analyzing data. Both <strong>reasoning</strong> with and <strong>computing</strong> with data play important roles in these related disciplines.</p>
@@ -509,7 +510,10 @@ My name is Liza</p>
 <div class="footer">
 <p>If you’re looking at these slides later, we probably (tech willing) decided on a numeric variable to measure about the group here.</p>
 </div>
-</section></section><section><section id="core-terms" class="title-slide slide level1 center"><h1>core terms</h1>
+</section><section id="visualising-re-sampling" class="slide level2"><h2>visualising re-sampling</h2>
+<p><a href="https://vit.inzight.nz/samplingVariation/SamplingVariation.php?file=https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5hcfcvKZe4xBRKueV7q8t8FjuqEeVH395bZ7KqNjxjil5erdSoZ0GaGSGz24k8Jn3F4u75Qkqkc4Y/pub?gid=1202419930&amp;single=true&amp;output=csv&amp;var=Answer,n">sampling variation tool link</a></p>
+<iframe width="90%" height="90%" src="https://vit.inzight.nz/samplingVariation/SamplingVariation.php?file=https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5hcfcvKZe4xBRKueV7q8t8FjuqEeVH395bZ7KqNjxjil5erdSoZ0GaGSGz24k8Jn3F4u75Qkqkc4Y/pub?gid=1202419930&amp;single=true&amp;output=csv&amp;var=Answer,n" title="Sampling variation"></iframe>
+</section></section><section><section id="core-ideas" class="title-slide slide level1 center"><h1>core ideas</h1>
 
 </section><section id="variability" class="slide level2"><h2>variability</h2>
 <p><span style="background-color:gold;"><strong>Variance</strong></span> or <strong>variability</strong> are ideas around the spread of our data. We often look at the <span style="background-color:gold;">standard deviation</span>, which is (roughly) the <em>average distance of all the data points from the mean of the data</em>.</p>
@@ -580,14 +584,15 @@ My name is Liza</p>
 </div>
 </div>
 </section><section id="sampling-variation" class="slide level2"><h2>sampling variation</h2>
-<p><strong>Sampling variation</strong> describes how much we would expect a statistic we are interested in to vary from sample to sample.</p>
+<p><strong>Sampling variation</strong> describes how much an estimate varies from sample to sample. (The estimate is our best guess at some true value from the population, also called a parameter.)</p>
 <blockquote>
 <p>For example, if each of you went out and sampled 20 people and calculated their median income and then came back and we all plotted our medians, how would they vary?</p>
 </blockquote>
 <div>
 <ul>
 <li class="fragment"><p>This is much more a teaching thought experiment than something you should actually go and do.</p></li>
-<li class="fragment"><p>But we can use what we know about the <span style="background-color: gold;">size of the sample</span> we can take AND the <span style="background-color: gold;">variability of that sample</span>, to make an educated guess about the variability of the population</p></li>
+<li class="fragment"><p>But we can use what we know about the <span style="background-color: gold;">size of the sample</span> we can take AND the <span style="background-color: gold;">variability of that sample</span>, to make an educated guess about the variability of the population, and so make claims about sampling variability.</p></li>
+<li class="fragment"><p>We quantify this uncertainty with our <span style="background-color:gold;">standard error</span>.</p></li>
 </ul>
 </div>
 </section><section class="slide level2"><div class="quarto-figure quarto-figure-center">
@@ -596,7 +601,7 @@ My name is Liza</p>
 </div>
 </section><section class="slide level2"><div class="quarto-figure quarto-figure-center">
 <figure><p><img data-src="https://www.stat.auckland.ac.nz/~wild/WPRH/AnimGifs/boxes_2samp_mem_100_600.gif" style="width:88.0%"></p>
-<figcaption>A gif showing box plot summaries for a range of samples of size 10 from two populations.</figcaption></figure>
+<figcaption>A gif showing box plot summaries for a range of samples of size 100 from two populations.</figcaption></figure>
 </div>
 </section><section id="an-error-but-not-a-mistake" class="slide level2"><h2>an <em>error</em> but not a mistake</h2>
 <div>
@@ -616,31 +621,140 @@ My name is Liza</p>
 </section><section id="aside-non-sampling-error-actual-mistakes" class="slide level2"><h2>aside: non-sampling error (actual mistakes)</h2>
 <p>All sources of error <em>not</em> related to sampling.</p>
 <div>
-<p>Examples include: - coverage error - measurement error - interviewer bias - poor questionairre design - non-response error</p>
+<p>Examples include:</p>
+<ul>
+<li class="fragment"><p>coverage error</p></li>
+<li class="fragment">
+<p>measurement error</p>
+<ul>
+<li class="fragment"><p>interviewer bias</p></li>
+<li class="fragment"><p>poor questionnaire design</p></li>
+</ul>
+</li>
+<li class="fragment"><p>non-response error</p></li>
+</ul>
 </div>
+</section><section class="slide level2"><p>The next two ideas are the most “not what you feel like they should be when you first learn about them” concepts I have ever encountered.</p>
 </section><section id="confidence-intervals" class="slide level2"><h2>confidence intervals</h2>
-</section></section><section><section id="statistical-tests" class="title-slide slide level1 center"><h1>statistical tests</h1>
-
+<blockquote>
+<p>Example: For religious Asian New Zealanders in 2006, the odds of mortality in the next 5 years were 1.25 (95% CI: 1.06, 1.47) times higher that for their non-religious counterparts.</p>
+</blockquote>
+<div>
+<ul>
+<li class="fragment">This is a claim about confidence in the METHOD that produces the interval</li>
+<li class="fragment">It is <em>not</em> the same as saying I’m 95/% sure the real value is in here.</li>
+<li class="fragment">More like, if in 100 universes I sampled from the population/underlying process and applied this method, around 95 of those universes I would have captured the true value.</li>
+</ul>
+<p><br></p>
+<ul>
+<li class="fragment">I just don’t know which type of universe this is…</li>
+<li class="fragment">… and I’l never know.</li>
+</ul>
+</div>
+<div class="footer">
+<p>This is a finding from my thesis, <a href="https://researchspace.auckland.ac.nz/handle/2292/67251"><em>Longitudinal predictors of mortality inequalities in Aotearoa New Zealand</em></a>.</p>
+</div>
+</section><section id="statistical-tests" class="slide level2"><h2>statistical tests</h2>
+<p>Statistical tests go hand-in-hand with confidence intervals. They are really two sides of the same coin.</p>
+<p><strong>CI</strong>: What is a <span style="background-color:gold;">plausible range</span> of values for the thing we want to make a claim about?</p>
+<p><strong>Tests</strong>: Can I <span style="background-color:gold;">reject the claim</span> that the value is this number?</p>
 </section><section id="what-is-a-p-value-anyways" class="slide level2"><h2>what is a p-value anyways?</h2>
-<div class="note">
+<p>It is NOT how likely we are to be right. It is NOT how likely</p>
+<ul>
+<li>It is a ‘conditional probability’.</li>
+<li>IF it was true that the value really is <em>this specific number</em>, then how unusual would it be to get a result like this (or more extreme)</li>
+</ul>
+<p>We talk about <span style="background-color:gold;">hypothesis testing</span>, and the idea is that we’re setting up a mini court trial against this hypothesis. It is innocent till proven guilty, so we need to gather evidence against it.</p>
+</section><section id="common-test-purposes" class="slide level2"><h2>common test purposes</h2>
+<ul>
+<li>Is this coin fair? Our hypothesised value could be that it flips heads half the tim (0.5).</li>
+<li>Are the means of these two groups different? We would hypothesise 0, as a different of 0 is no difference.</li>
+<li>Do x and y change together? We would hypothesis that the <em>slope</em> is 0, which is the case where they don’t change together.</li>
+</ul>
+<p>We usually try to set up the ‘nothing going on’/‘nothing to see here’/‘status quo’/‘boring’ value and then knock it down by saying, well…IF that was true, it would be very unusual to see a value like we actually saw in our data.</p>
+<aside class="notes"><p>Does anyone know what value we usually look for in these tests?</p>
 <p>Any D&amp;D players in the room? Baldur’s Gate 3 brain rot like me?</p>
 <p>What’s the chance of getting a natural 20? 1 in 20, which is 5% of the time.</p>
-</div>
-</section><section id="p-hacking" class="slide level2"><h2>p-hacking</h2>
-<p><code>{=html, eval=F} &lt;iframe width="100%" height="90%" src="https://projects.fivethirtyeight.com/p-hacking/" title="Hack Your Way to Scientific Glory"&gt;&lt;/iframe&gt;</code></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="p-hacking" class="slide level2"><h2>p-hacking</h2>
 <p>source: <a href="https://projects.fivethirtyeight.com/p-hacking/">FiveThirtyEight</a></p>
+<iframe width="90%" height="90%" src="https://projects.fivethirtyeight.com/p-hacking/" title="Hack Your Way to Scientific Glory"></iframe>
 </section><section id="some-of-us-have-a-more-difficult-time-saying-booyah-to-moral-relativism" class="slide level2"><h2>“some of us have a more difficult time saying ‘booyah’ to moral relativism”</h2>
 <iframe width="100%" height="90%" src="https://www.youtube.com/embed/6pzvaiS45-0?si=YlPn1YYraepLHGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-</section></section><section id="secondary-data" class="title-slide slide level1 center"><h1>secondary data</h1>
-<p>More and more of data science, and data journalism, uses some form of &lt;span style=“background-color:gold;” secondary data <span>.</span></p>
-</section><section><section id="case-studies" class="title-slide slide level1 center"><h1>case studies</h1>
+</section><section id="bogs" class="slide level2"><h2>bogs</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/bog.png" alt="Two AI images generated by DALLE 2 from the prompt “dramatic oil painting of a swamp”. The left is labelled ‘bog of overconfidence’ and the right is labelled ‘bog of disbelief’."></p>
+</figure>
+</div>
+</section><section class="slide level2"><p>The following is about students in intro stats classes, but I think it is also really helpful for checking in on your own thinking and anticipating how others may engage with your communication about data and models.</p>
+<blockquote>
+<p>…students tend to enter and leave most introductory statistics courses thinking of statistics in one of at least two incorrect ways:</p>
+<p>1. Students believe that statistics and mathematics are similar in that statistical problems have a single correct answer; an answer that tells us indisputable facts about the world we live in (Bog #1: overconfidence) (Nicholson &amp; Darnton, 2003; Pfannkuch &amp; Brown, 1996),</p>
+<p>or,</p>
+<p>2. Students believe that statistics can be ‘made to say anything,’ like ‘magic,’ and so cannot be trusted. Thus, statistics is viewed as disconnected and useless for scientific research and society (Bog #2: disbelief) (Martin, 2003; Pfannkuch &amp; Brown, 1996).</p>
+<p>Tintle, N., Chance, B., Cobb, G., Roy, S., Swanson, T., &amp; VanderStoep, J. (2015). Combating Anti-Statistical Thinking Using Simulation-Based Methods Throughout the Undergraduate Curriculum. <em>The American Statistician</em>, <em>69</em>(4), 362–370. <a href="http://www.jstor.org/stable/24592138" class="uri">http://www.jstor.org/stable/24592138</a></p>
+</blockquote>
+<p>📄 PDF: <a href="https://arxiv.org/pdf/1508.00543.pdf" class="uri">https://arxiv.org/pdf/1508.00543.pdf</a></p>
+</section></section><section><section id="secondary-data" class="title-slide slide level1 center"><h1>secondary data</h1>
+<p>More and more of data science, and data journalism, uses some form of <span style="background-color:gold;">secondary data</span>.</p>
+<p>Are any of these classical statistical tools relevant?</p>
+<div>
+<ul>
+<li class="fragment"><p>We have more and more scope to measure and observe the world, but much of this is through proxies — not quite the thing we want to measure, but something related.</p></li>
+<li class="fragment">
+<p>I would argue this requires MORE statistical thinking, not less and is the kind of thinking that AI won’t be able to do well by itself.</p>
+<ul>
+<li class="fragment">Example proxy: <a href="https://www.fireandemergency.nz/incidents-and-news/incident-reports/">How many fires in Auckland yesterday?</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section><section id="seeing-what-is-not-there" class="slide level2"><h2>seeing what is not there</h2>
+<p>This might sounds strange coming from a statistician, but sometimes the most important data story is the story about where the data isn’t. What’s MISSING?</p>
+<blockquote>
+<p>🖼️ Check out the incredible mixed-media installation The Library of Missing Datasets (2016) by MIMI ỌNỤỌHA. It is “a physical repository of those things that have been excluded in a society where so much is collected.</p>
+<p>“Missing data sets” are the blank spots that exist in spaces that are otherwise data-saturated.”</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/ONUOHA-datasets.png" style="width:60.0%" alt="A feminine hand with darker skin reaches into a filing cabinet with many files inside, each with tabbed labels. The hand is reaching for “Publicaly available gun trace data”. The image is from MIMI ỌNỤỌHA’s website and is of ‘The Library of Missing Datasets’ (2016)"></p>
+</figure>
+</div>
+</section><section class="slide level2"><div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/stretch.png" style="width:80.0%" alt="Four statistical distributions"></p>
+</figure>
+</div>
+</section></section><section id="case-studies" class="title-slide slide level1 center"><h1>case studies</h1>
 
-</section><section id="risky-business" class="slide level2"><h2>risky business</h2>
-<div class="columns">
+</section><section><section id="risky-business" class="title-slide slide level1 center"><h1>risky business</h1>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Content warning: There is brief discussion of abortion as part of this case study.</p>
+<p>If at any time you feel uncomfortable or would like any support, please let one of us know. It is always okay to take a step away if you need it.</p>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div class="columns">
 <div class="column" style="width:60%;">
 <p>In October 1995 the UK Committee on Safety of Medicines announced people taking 3rd generation oral contraceptive (OC) pills had double the risk of blood clots of 2nd generation OCs.</p>
 <p><br></p>
-<p><span style="background-color:gold; fontsize:80pt;">That is a 100% increase</span>.</p>
+<p><span style="fontsize:90pt; background-color:gold;">That is a 100% increase</span></p>
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure><p><img data-src="img/doctors-note.jpg" alt="Cartoony sketch of a piece of paper that says &quot;Dear Doctor,&quot; and then had a bunch of scribble with the word &quot;TWOFOLD&quot; emphasised and a signature at the bottom."></p>
@@ -648,7 +762,8 @@ My name is Liza</p>
 </div>
 </div>
 </div>
-</section><section class="slide level2"><p><img data-src="img/article.png"></p>
+</section><section class="slide level2"><p><img data-src="img/pill-paper-1.png">{fig-alt=“Clippings from the Guardian newspaper with title”Blood clot alert on the pill: Women warned about 7 brands of contraceptive”. The text goes on to say: “One and a half million women were told yesterday that their brand of contraceptive pill could double the risk of a blood clot, provoking the biggest scare over the safety of oral contracepetives.”}</p>
+</section><section class="slide level2"><p><img data-src="img/pill-paper-2.png">{fig-alt=“Clipping from the Guardian newspaper with title”Hundreds of callers inundate clinic for advice on warning”}</p>
 </section><section id="quick-write" class="slide level2"><h2>quick, write!</h2>
 <p><span style="font-size:80pt;">what follow-up question(s) do you have about this headline/info?</span></p>
 <p>Go to <a href="https://statsapps.online/slinky/G291726211GT2H/student/">this link</a> and write a short answer. It is anonymous.</p>
@@ -656,27 +771,206 @@ My name is Liza</p>
 <figure><p><img data-src="img/quickwrite-qr.png" width="650"></p>
 </figure>
 </div>
-</section><section id="run-run-as-fast-as-you-can" class="slide level2"><h2>run, run as fast as you can</h2>
-</section><section id="for-whom-the-cowbell-tolls" class="slide level2"><h2>for whom the (cow)bell tolls</h2>
-</section></section><section id="thanks-for-letting-me-talk-about-something-i-love" class="title-slide slide level1 center"><h1>thanks for letting me talk about something I love!</h1>
+</section><section class="slide level2"><div class="columns">
+<div class="column" style="width:50%;">
+<div class="columns">
+<p>Oral contraceptives were already known to increase risk of blood clots.</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/clot-small.png" alt="A cartoon/sketch person wearing classes with short hair looking at a pamphlet with a blood drop on it that says &quot;warning clot risk:"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><blockquote>
+<p>“For the vast majority of women, the pill is a safe and highly effective form of contraception. …</p>
+<p>No-one need stop taking the pill before obtaining medical advice.”</p>
+</blockquote>
+<p>~ Advice from UK Committee on Safety of Medicines in the same message</p>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/pill-all-small.jpg" alt="10 cartoon medication tablets" width="1440"></p>
+</figure>
+</div>
+<aside class="notes"><p>Use of 3rd generation OCs decreased 80%</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section class="slide level2"><div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/pill-20-small.jpg" alt="The same 10 pills as on the previous slid, but now with 8 of the 10 coloured grey."></p>
+</figure>
+</div>
+</section><section class="slide level2"><div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/pharmacy-small.png" style="width:60.0%" alt="Cartoon sketch of a pharmacy building with a sign in the window saying 'no gen 2 oc left'"></p>
+</figure>
+</div>
+<aside class="notes"><p>As this was the most used pill type there was not enough alternatives so some people were left with no other OC option</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="more-abortions" class="slide level2"><h2>13,500 more abortions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/abortions.png" style="width:80.0%"></p>
+</figure>
+</div>
+</section><section id="an-estimated-800-additional-conceptions-among-girls-under-16" class="slide level2"><h2>an estimated 800 additional conceptions among girls under 16</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/girl-small.jpg" style="width:40.0%"></p>
+</figure>
+</div>
+</section><section id="million-spent-on-abortions-by-the-national-health-service-nhs" class="slide level2"><h2>£4 - 6 million spent on abortions by the National Health Service (NHS)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/money-small.jpg" style="width:50.0%" alt="Cartoon sketch of stacks of pounds"></p>
+</figure>
+</div>
+</section><section id="what-went-wrong" class="slide level2"><h2>what went wrong?</h2>
+<p>Absolute risk is a probability.</p>
+<p>The absolute risk of getting a blood clot for people taking the 3rd gen OC could be calculated as:</p>
+<p><span class="math display">\[
+\frac{\text{Number of people taking the 3rd gen OC that get a blood clot}}{\text{Total number of people taking the 3rd gen OC}}
+\]</span></p>
+</section><section class="slide level2"><div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/10-people-small.jpg" style="width:80.0%" alt="10 cartoon people"></p>
+</figure>
+</div>
+</section><section class="slide level2"><div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/3-people-small.png" style="width:80.0%" alt="Same picture as before but three people now have a blood drop symbol indicating a clot."></p>
+</figure>
+</div>
+</section><section class="slide level2"><div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/fraction-small.png" style="width:80.0%" alt="3 with clots over the whole group"></p>
+</figure>
+</div>
+</section><section id="what-does-double-the-risk-mean" class="slide level2"><h2>what does DOUBLE the risk mean?</h2>
+<div>
+<ul>
+<li class="fragment"><p>When we talk about double the risk, or 2x the risk or a twofold increase in risk…</p></li>
+<li class="fragment"><p>We’re talking about relative risk.</p></li>
+<li class="fragment"><p>We are comparing two absolute risks</p></li>
+</ul>
+</div>
+</section><section class="slide level2"><table>
+<thead><tr class="header">
+<th></th>
+<th>Absolute Risk 1</th>
+<th>Absolute Risk 2</th>
+<th>Relative Risk</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td>Example A</td>
+<td>30%</td>
+<td>60%</td>
+<td>2</td>
+</tr></tbody>
+</table></section><section class="slide level2"><table>
+<thead><tr class="header">
+<th></th>
+<th>Absolute Risk 1</th>
+<th>Absolute Risk 2</th>
+<th>Relative Risk</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Example A</td>
+<td>30%</td>
+<td>60%</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Example B</td>
+<td>3%</td>
+<td>6%</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></section><section class="slide level2"><table>
+<thead><tr class="header">
+<th></th>
+<th>Absolute Risk 1</th>
+<th>Absolute Risk 2</th>
+<th>Relative Risk</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Example A</td>
+<td>30%</td>
+<td>60%</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Example B</td>
+<td>3%</td>
+<td>6%</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Example C</td>
+<td>0.3%</td>
+<td>0.6%</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></section></section><section><section id="run-run-as-fast-as-you-can" class="title-slide slide level1 center"><h1>run, run as fast as you can</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/original-dash.png"></p>
+</figure>
+</div>
+<p>The regression lines are extrapolated (broken blue and red lines for men and women, respectively) and 95% confidence intervals (dotted black lines) based on the available points are superimposed. The projections intersect just before the 2156 Olympics, when the winning women’s 100-metre sprint time of 8.079 s will be faster than the men’s at 8.098 s. From: <a href="https://www.nature.com/articles/431525a">Momentous sprint at the 2156 Olympics?</a></p>
+</section><section id="quick-write-1" class="slide level2"><h2>quick, write!</h2>
+<p><span style="font-size:80pt;">what does this chart tell you? any concerns?</span></p>
+<p>Go to <a href="https://statsapps.online/slinky/G291726211GT2H/student/">this link</a> and write a short answer. It is anonymous.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/quickwrite-qr.png" width="650"></p>
+</figure>
+</div>
+</section><section class="slide level2"><p>Case study source and discussion: <a href="https://callingbullshit.org/case_studies/case_study_gender_gap_running.html">The gender gap in 100-meter dash times, Calling Bullshit</a></p>
+</section></section><section><section id="for-whom-the-cowbell-tolls" class="title-slide slide level1 center"><h1>for whom the (cow)bell tolls</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/cowbell.gif" style="width:60.0%" alt="Christopher Walken 'more cowbell' scene SNL skit"></p>
+</figure>
+</div>
+</section><section class="slide level2"><div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/musician_mortality.jpeg" style="width:60.0%"></p>
+</figure>
+</div>
+<p>This graph is from an article entitled <a href="https://theconversation.com/music-to-die-for-how-genre-affects-popular-musicians-life-expectancy-36660">Music to die for: how genre affects popular musicians’ life expectancy</a>, the Conversations</p>
+</section><section id="quick-write-2" class="slide level2"><h2>quick, write!</h2>
+<p><span style="font-size:80pt;">what does this chart tell you? any concerns?</span></p>
+<p>Go to <a href="https://statsapps.online/slinky/G291726211GT2H/student/">this link</a> and write a short answer. It is anonymous.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="img/quickwrite-qr.png" width="650"></p>
+</figure>
+</div>
+</section><section class="slide level2"><p>Case study source and discussion: <a href="https://callingbullshit.org/case_studies/case_study_musician_mortality.html">Musicians and mortality, Calling Bullshit</a></p>
+</section></section><section><section id="thank-you-questions" class="title-slide slide level1 center"><h1>thank you! questions?</h1>
 <p>Let’s keep in touch.</p>
 <p><a href="mailto:liza.bolton@auckland.ac.nz">liza.bolton@auckland.ac.nz</a></p>
 <p><a href="www.lizabolton.com">lizabolton.com</a></p>
-</section><section><section id="resources-references" class="title-slide slide level1 center"><h1>resources &amp; references</h1>
-
-</section><section id="further-resources" class="slide level2"><h2>further resources</h2>
-<p>(All FREE unless indicated with $$$)</p>
-<p><br></p>
+</section><section id="resources-references" class="slide level2"><h2>resources &amp; references</h2>
+<h3 id="further-resources">further resources</h3>
 <p>📘 Telling Stories with Data by Rohan Alexander <a href="https://tellingstorieswithdata.com">tellingstorieswithdata.com</a></p>
-<p>🏫 ($$$) University of Auckland course: <a href="https://courseoutline.auckland.ac.nz/dco/course/STATS/150/1245"><em>STATS 150: Communicating Statistics</em></a><sup>1</sup> (a single course can be done as a Certificate of Proficiency; lecture recorded but tutorial attendance required)</p>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>This course used to be called <em>Lies, Damned Lies and Statistics</em> and I only found out yesterday it got renamed. I am inconsolable 😭</p></li></ol></aside></section></section><section><section id="references" class="title-slide slide level1 center"><h1>references</h1>
-
-</section><section id="images" class="slide level2"><h2>images</h2>
+<p>🏫 University of Auckland course: <a href="https://courseoutline.auckland.ac.nz/dco/course/STATS/150/1245"><em>STATS 150: Communicating Statistics</em></a><sup>1</sup> (a single course can be done as a Certificate of Proficiency; lecture recorded but tutorial attendance required)</p>
+<p><br></p>
+<h3 id="image-reference">image reference</h3>
 <p>Title photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/blue-and-black-floral-textile-sdx3SVUNjQI?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></p>
 <div class="footer footer-default">
 
 </div>
-</section></section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>This course used to be called <em>Lies, Damned Lies and Statistics</em> and I only found out yesterday it got renamed. I am inconsolable 😭</p></li></ol></aside></section></section>
 </div>
   </div>
 

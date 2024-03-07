@@ -16,6 +16,8 @@ format:
     highlight-style: ayu-mirage
     slide-number: c/t
     auto-stretch: false
+    code-fold: true
+    code-summary: "Show the code"
 code-link: true
 execute:
   echo: true
@@ -24,6 +26,10 @@ editor:
   markdown: 
     wrap: 72
 ---
+
+```{r, echo=F, message=F, warning=F}
+library(tidyverse)
+```
 
 # scan for slides
 
@@ -101,6 +107,12 @@ I currently teach a range of university courses, but all of them touch
 on how we explore and visualize data, how we can learn from data, how we
 communicate what we find to others (statisticians and non-statisticians
 alike) and ethical considerations for people making decisions with data.
+
+I love teaching, and I imagine that as a group there will be quite a
+variety when it comes to where everyone is at with their statistical
+knowledge and confidence. So please stop me to ask things! If I am
+assuming you know something you don't that is a waste of your previous
+time --- tell me!
 :::
 
 ## quick, write! what's your experience with "statistics"?
@@ -126,10 +138,10 @@ dev.off()
 ## plan for this session
 
 -   warm-up activity (sampling variation)
--   *errors* but not mistakes
--   testing, testing 1 2 3
--   risky business
--   what i tell my students not to do
+-   core terms (samples, population, variance, sampling variation)
+-   confidence intervals
+-   statistical tests
+-   case studies
 -   bogs
 
 ::: notes
@@ -182,9 +194,75 @@ If you're looking at these slides later, we probably (tech willing)
 decided on a numeric variable to measure about the group here.
 :::
 
+# core terms
+
+## variability
+
+[**Variance**]{style="background-color:gold;"} or **variability** are
+ideas around the spread of our data. We often look at the [standard
+deviation]{style="background-color:gold;"}, which is (roughly) the
+*average distance of all the data points from the mean of the data*.
+
+> If we each put down how many trillions of dollars we have to the
+> nearest trillion? I'm assuming 0, 0, 0, 0, ...
+
+> The distance we've each travelled this week might have quite a lot of
+> variance.
+
+## plot some simulated data
+
+```{r}
+#| fig-cap: Dot plots of three (simulated) data sets with different variabilities
+#| 
+
+# To simulate the same way each time
+set.seed(8)
+
+# Simulate some data
+data <- tibble(scenario = rep(c("No var", "Low var", "High var"), each = 100), value = c(rep(0, 100), rnorm(100), rnorm(100, sd = 5)))
+
+# Liza's colours
+colors <- c("#3C143F", "#87528A", "#808080")
+
+# Plot!
+ggplot(data, aes(x = value, group = scenario, 
+                 fill = scenario, color = scenario)) +
+  geom_dotplot(bins = 20) +
+  scale_fill_manual(values = colors) +  # Set manual color codes
+  scale_color_manual(values = colors) +
+  theme_minimal() +
+  facet_wrap(~scenario)
+```
+
+## summarise the data
+
+```{r}
+# Summarise the data
+data |> 
+  group_by(scenario) |> 
+  summarise(sd = round(sd(value), 1), var = round(var(value), 1)) |>
+  knitr::kable()
+  
+```
+
 ## sampling variation
 
-**Sampling variation** is the
+**Sampling variation** describes how much we would expect a statistic we
+are interested in to vary from sample to sample.
+
+> For example, if each of you went out and sampled 20 people and
+> calculated their median income and then came back and we all plotted
+> our medians, how would they vary?
+
+::: incremental
+-   This is much more a teaching thought experiment than something you
+    should actually go and do.
+
+-   But we can use what we know about the [size of the
+    sample]{style="background-color: gold;"} we can take AND the
+    [variability of that sample]{style="background-color: gold;"}, to
+    make an educated guess about the variability of the population
+:::
 
 ------------------------------------------------------------------------
 
@@ -196,11 +274,45 @@ populations.](https://www.stat.auckland.ac.nz/~wild/WPRH/AnimGifs/boxes_2samp_me
 
 ![A gif showing box plot summaries for a range of samples of size 10
 from two
-populations.](https://www.stat.auckland.ac.nz/~wild/WPRH/AnimGifs/boxes_2samp_mem_10_600.gif){width="88%"}
+populations.](https://www.stat.auckland.ac.nz/~wild/WPRH/AnimGifs/boxes_2samp_mem_100_600.gif){width="88%"}
 
-# *errors* but not mistakes
+## an *error* but not a mistake
 
-# testing, testing, 1 2 3
+::: incremental
+[Sampling error]{style="background-color:gold;"} is the difference
+between the result from your survey and the population.
+
+-   This can also apply to observations of some underlying process.
+
+    -   You have a machine that produces widgets, how many have a fault?
+    -   Or, you take a census of all the patients in a doctor's clinic
+        (the population of current patients) and they rate their
+        experience. Now, you want to make a prediction or inference
+        about the average experiences of new patients in the coming
+        year...even if everything is exactly the same (impossible, but
+        hey) there will still be random noise that we can't account for
+        with a statistical model, so we'll have uncertainty about what
+        this value should be.
+
+-   "Our world imperfectly becomes data" - [Rohan
+    Alexander](https://tellingstorieswithdata.com/01-introduction.html#how-do-our-worlds-become-data)
+
+-   [Mantra: Probably wrong, but hopefully
+    close]{style="font-size: 60pt"}
+:::
+
+## aside: non-sampling error (actual mistakes)
+
+All sources of error *not* related to sampling.
+
+::: incremental
+Examples include: - coverage error - measurement error - interviewer
+bias - poor questionairre design - non-response error
+:::
+
+## confidence intervals
+
+# statistical tests
 
 ## what is a p-value anyways?
 
@@ -223,9 +335,58 @@ source:
 ```{=html}
 <iframe width="100%" height="90%" src="https://www.youtube.com/embed/6pzvaiS45-0?si=YlPn1YYraepLHGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
-# risky business
+# secondary data
 
-pill case study and bacon?
+More and more of data science, and data journalism, uses some form of
+\<span style="background-color:gold;" secondary data <span>.
+
+# case studies
+
+## risky business
+
+::: columns
+::: {.column width="60%"}
+In October 1995 the UK Committee on Safety of Medicines announced people
+taking 3rd generation oral contraceptive (OC) pills had double the risk
+of blood clots of 2nd generation OCs.
+
+<br>
+
+[That is a 100% increase]{style="background-color:gold; fontsize:80pt;"}.
+:::
+
+::: {.column width="40%"}
+![](img/doctors-note.jpg){fig-alt="Cartoony sketch of a piece of paper that says \"Dear Doctor,\" and then had a bunch of scribble with the word \"TWOFOLD\" emphasised and a signature at the bottom."
+fig-align="center"}
+:::
+:::
+
+---
+
+![](img/article.png)
+
+## quick, write! 
+
+<span style="font-size:80pt;">what follow-up question(s) do you have about this headline/info?</span>
+
+Go to [this
+link](https://statsapps.online/slinky/G291726211GT2H/student/) and
+write a short answer. It is anonymous.
+
+
+```{r, eval = F, echo=F}
+# Need to rerun if change URL
+code <- qrcode::qr_code("https://statsapps.online/write/G292N1Q132D9/create/")
+png("img/quickwrite-qr.png")
+plot(code)
+dev.off()
+```
+
+![](img/quickwrite-qr.png){fig-align="center" width="650"}
+
+## run, run as fast as you can
+
+## for whom the (cow)bell tolls
 
 # thanks for letting me talk about something I love!
 

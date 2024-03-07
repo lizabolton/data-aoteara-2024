@@ -4,7 +4,7 @@ subtitle: "data aotearoa 2024"
 author: "liza bolton"
 date: 2024-03-08
 title-slide-attributes:
-  data-background-image: "/img/title_image.png"
+  data-background-image: "title_image.png"
   data-background-opacity: "0.4"
 format:
   revealjs:
@@ -35,7 +35,7 @@ plot(code)
 dev.off()
 ```
 
-![](img/slide-qr.png){fig-align="center" width="700"}
+![](img/slide-qr.png){fig-align="center" width="650"}
 
 or go to [link.lizabolton.com](link.lizabolton.com)
 
@@ -121,7 +121,7 @@ plot(code)
 dev.off()
 ```
 
-![](img/quickwrite-qr.png){fig-align="center" width="700"}
+![](img/quickwrite-qr.png){fig-align="center" width="650"}
 
 ## plan for this session
 
@@ -186,7 +186,7 @@ decided on a numeric variable to measure about the group here.
 
 **Sampling variation** is the
 
-\-\--
+------------------------------------------------------------------------
 
 ![A gif showing box plot summaries for a range of samples of size 10
 from two
@@ -262,4 +262,3 @@ Title photo by
 <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pawel
 Czerwinski</a> on
 <a href="https://unsplash.com/photos/blue-and-black-floral-textile-sdx3SVUNjQI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-
